@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Supermercado California</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu California</title>
+    <style>
+   
+            body {
+                font-family: Arial, sans-serif;
+                box-sizing: border-box; /* Garante que o padding e a borda sejam incluídos nas dimensões */
+                margin: 0; /* Remove margens padrão */
+                padding: 0; /* Remove padding padrão */
+                width: 100%; /* Garante que a largura do body não exceda a largura da tela */
+                overflow-x: hidden; /* Desativa o scroll horizontal */
+            }
+            .navbar {
+                background-color: #003F7D; /* Cor azul do fundo */
+                padding: 10px 0;
+                display: flex;
+                align-items: center;
+                justify-content: space-evenly;
+                align-items: center; /* Alinha itens verticalmente */
+    justify-content: space-between; /* Espaço entre os itens */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            }
+            .navbar .logo {
+                display: flex;
+                align-items: center;
+                margin-right: 20px;
+            }
+            .navbar .logo img {
+                height: 50px;
+            }
+            .navbar .menu-title {
+                display: flex;
+                align-items: center;
+                padding: 5px;
+                border-radius: 5px;
+                margin-right: 145px;
+                font-family: Arial, sans-serif;
+                font-size: 25px;
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+            }
+            .navbar .right-menu {
+                display: flex;
+                align-items: center;
+                margin-right: 20px;
+            }
+            .navbar .right-menu li {
+                margin-left: 20px;
+                color: #fff;
+                margin-right: 50px;
+            }
+            .navbar .right-menu li a {
+                color: #fff;
+                text-decoration: none;
+                font-weight: bold;
+            }
+            .navbar .right-menu .cart-icon {
+                background-color: #7261c20e; /* Cor verde do ícone de carrinho */
+                border-radius: 50%;
+                padding: 10px;
+            }
+            .popup {
+            display: none; 
+            position: fixed; 
+            top: 20%; 
+            left: 50%; 
+            transform: translate(-50%, -20%); 
+            background-color: #fff; 
+            padding: 20px; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+            z-index: 1000;
+        }
+        .item-count {
+            position: relative;
+            top: -15px; /* Ajuste a posição do contador */
+            background-color: #fbbd08; /* Cor do fundo do contador */
+            color: white; /* Cor do texto */
+            border-radius: 50%;
+            padding: 5px;
+            font-size: 12px larger; /* Tamanho do texto */
+        }
+        </style>
+    </head>
+    <body>
+        <div class="navbar">
+            <div class="produto-item">
+                <img src="img/Logo_california.jpeg" alt="logo">
+            </div>
+            <div class="menu-title">
+                <h1 class="sla">Supermercado California</h1>
+            </div>
+            <ul class="right-menu">
+                <li><a href="#carrinho" class="cart-icon">🛒</a> <span id="item-count" class="item-count">0</span></li>
+        </div>
+    
+    </body>
+    </html>
+
+    <!-- Seção Hero com Imagem de Destaque -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Bem-vindo ao Supermercado California</h2>
+            <p>Os melhores produtos e preços para você, com entrega rápida!</p>
+            <a href="#produtos" class="btn">Ver Produtos</a>
+        </div>
+    </section>
+
+    <!-- Seção de Produtos por Categorias -->
+    <section id="produtos" class="produtos">
+        <h2>Produtos em Destaque</h2>
+
+<!-- Seção de Frutas -->
+<h3>Frutas</h3>
+<div class="produtos-grid">
+    <div class="produto-item" data-id="14">
+        <img src="img/limão.png" alt="Maçã">
+        <h3>Limão Tahiti</h3>
+        <p>R$ 3,00 kg</p>
+        <a href="#" class="btn comprar">Adicionar ao Carrinho</a>
+    </div>
+    <div class="produto-item" data-id="12">
+        <img src="img/banana_nanica.png" alt="Banana">
+        <h3>Banana Nanica Unidade</h3>
+        <p>R$ 1,03 UN</p>
+        <a href="#" class="btn comprar">Adicionar ao Carrinho</a>
+    </div>
+    <div class="produto-item" data-id="13">
+        <img src="img/uva_vitoria.png" alt="Uva">
+        <h3>Uva Vitória Bandeja 500g</h3>
+        <p>R$ 4,50 kg</p>
+        <a href="#" class="btn comprar">Adicionar ao Carrinho</a>
+    </div>
+</div>
+
+<!-- Seção de Carnes -->
+<h3>Carnes</h3>
+<div class="produtos-grid">
+    <div class="produto-item" data-id="16">
+        <img src="img/Frango.png" alt="Frango">
+        <h3>Filé de Peito de Frango Congelado Sadia Zip 1kg</h3>
+        <p>R$ 8,50</p>
+        <a href="#" class="btn comprar">Adicionar ao Carrinho</a>
+    </div>
+    <div class="produto-item" data-id="17">
+        <img src="img/Picanha .png" alt="Carne Bovina">
+        <h3>Picanha bovina Resfriada Bassi peça 1,1kg</h3>
+        <p>R$ 22,00 kg</p>
+        <a href="#" class="btn comprar">Adicionar ao Carrinho</a>
+    </div>
+    <div class="produto-item" data-id="18">
+        <img src="img/Linguiça Toscana .png" alt="Carne Suína">
+        <h3>Linguiça Toscana Congelada Perdigão NaBrasa Apimentada 1kg</h3>
+        <p>R$ 15,00 kg</p>
+        <a href="#" class="btn comprar">Adicionar ao Carrinho</a>
+    </div>
+</div>
+
+<!-- Seção de Bebidas -->
+<h3>Bebidas</h3>
+<div class="produtos-grid">
+    <div class="produto-item" data-id="7">
+        <img src="img/Suco de larandja.png" alt="Suco de Laranja">
+        <h3>Suco Laranja Integral Refrigerado Select 2L</h3>
+        <p>R$ 16,89 un</p>
+        <a href="#" class="btn comprar">Adicionar ao Carrinho</a>
+    </div>
+    <div class="produto-item" data-id="6">
+        <img src="img/coca.jpg" alt="Refrigerante">
+        <h3>Refrigerante</h3>
+        <p>R$ 12,00 un</p>
+        <a href="#" class="btn comprar">Adicionar ao Carrinho</a>
+    </div>
+    <div class="produto-item" data-id="9">
+        <img src="img/Agua.png" alt="Água Mineral">
+        <h3>Água Mineral Select 5L</h3>
+        <p>R$ 2,00 un</p>
+        <a href="#" class="btn comprar">Adicionar ao Carrinho</a>
+    </div>
+</div>
+
+    </section>
+
+   <!-- Popup do Carrinho -->
+
+<div id="cart-popup" class="popup">
+
+    <h3>Itens no Carrinho</h3>
+
+    <div id="cart-items"></div>
+
+    <button onclick="closeCartPopup()">Fechar</button>
+
+    <button onclick="proceedWithSale()">Prosseguir para o Pagamento</button>
+
+</div>
+
+
+<!-- Popup do Total da Compra -->
+
+<div id="total-popup" class="popup">
+
+    <p id="total-amount"></p> 
+
+    <button onclick="closeTotalPopup()">Fechar</button> 
+
+    <button onclick="confirmSale()">Confirmar Venda</button> <!-- Botão para confirmar a venda -->
+
+</div>
+
+    <footer>
+        <p>&copy; 2024 Supermercado California. Todos os direitos reservados.</p>
+    </footer>
+
+
+    <script src="index.js"></script>
+
+</body>
+
+</html>
